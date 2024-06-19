@@ -45,4 +45,21 @@ $light: #fefdfa;
 }
 
 ._margin-b {
+  margin-bottom: 170px;
+  @media (max-width: $mobile) {
+    margin-bottom: 100px;
+  }
+}
+
+._h2 {
+  text-align: center;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 50px;
+  color: $green-dark;
+  @media (max-width: $mobile) {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
 }
