@@ -1,0 +1,37 @@
+.book {
+  &__container {
+  }
+
+  &__title {
+    text-align: left;
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
+  }
+
+  &__form {
+    display: flex;
+    gap: 24px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__input {
+    flex: 0 1 33.33333%;
+    @media (max-width: $mobile) {
+      height: 46px;
+      flex: auto;
+    }
+  }
+
+  &__button {
+    flex: 0 1 33.33333%;
+    font-size: 16px;
+    @media (max-width: $mobile) {
+      height: 46px;
+      flex: auto;
+    }
+  }
+}

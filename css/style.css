@@ -151,6 +151,38 @@ html {
   }
 }
 
+._input {
+  border: 1px solid #c7c5c5;
+  outline: 1px solid #ffffff;
+  border-radius: 7px;
+  height: 46px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  color: #232323;
+  padding-left: 10px;
+}
+
+._input::-webkit-input-placeholder {
+  color: #232323;
+}
+
+._input:-ms-input-placeholder {
+  color: #232323;
+}
+
+._input::-ms-input-placeholder {
+  color: #232323;
+}
+
+._input::placeholder {
+  color: #232323;
+}
+
+._input:hover, ._input:focus {
+  border: 2px solid #c7c5c5;
+}
+
 .wrapper {
   overflow: hidden;
   display: -webkit-box;
@@ -655,6 +687,7 @@ main {
 }
 
 .routes__trigger {
+  outline: 1px solid #ffffff;
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
@@ -910,5 +943,63 @@ main {
   .reviews__more {
     width: 100%;
     font-size: 14px;
+  }
+}
+
+.book__title {
+  text-align: left;
+}
+
+@media (max-width: 767.98px) {
+  .book__title {
+    text-align: center;
+  }
+}
+
+.book__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+
+@media (max-width: 767.98px) {
+  .book__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.book__input {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.33333%;
+          flex: 0 1 33.33333%;
+}
+
+@media (max-width: 767.98px) {
+  .book__input {
+    height: 46px;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
+}
+
+.book__button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.33333%;
+          flex: 0 1 33.33333%;
+  font-size: 16px;
+}
+
+@media (max-width: 767.98px) {
+  .book__button {
+    height: 46px;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
   }
 }
