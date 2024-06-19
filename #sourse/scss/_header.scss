@@ -1,0 +1,91 @@
+.header {
+  padding: 16px 0px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu {
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 24px;
+    align-items: end;
+  }
+
+  &__links {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__link {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $green-dark;
+    border-radius: 4px;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $green;
+    }
+  }
+
+  &__button {
+    width: 181px;
+    height: 46px;
+  }
+  &__phone {
+    font-weight: 600;
+    line-height: 130%;
+    color: $green-dark;
+    margin-bottom: 2px;
+    transition: color 0.3s;
+    &:hover {
+      color: $green;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}
+.menu {
+  &__body {
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-weight: 600;
+    line-height: 130%;
+    color: $green-dark;
+    position: relative;
+    &::after {
+      content: "";
+      bottom: -5px;
+      left: 0;
+      position: absolute;
+      background-color: $green-dark;
+      height: 2px;
+      width: 0%;
+      transition: all 0.3s;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

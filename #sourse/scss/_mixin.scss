@@ -1,0 +1,45 @@
+html {
+  scroll-behavior: smooth;
+}
+// resolution
+$pc: 1200px;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+//colors
+$green-dark: #1d3a02;
+$green: #0a6418;
+$green-hover: #075213;
+$white: #ffffff;
+$black: #232323;
+$gray: #c7c5c5;
+$light: #fefdfa;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  img {
+    display: none;
+  }
+}
+
+._btn {
+  background-color: $green;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: $white;
+  border-radius: 7px;
+  padding: 10px;
+  &:hover {
+    background-color: $green-hover;
+  }
+}
