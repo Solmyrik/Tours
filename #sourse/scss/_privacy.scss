@@ -1,0 +1,27 @@
+.privacy {
+  &__container {
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 50px;
+    @media (max-width: $mobile) {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 130%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__body {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
