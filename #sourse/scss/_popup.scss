@@ -1,5 +1,5 @@
 body::after {
-  content: '';
+  content: "";
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 100%;
@@ -56,117 +56,49 @@ body::after {
   .lock & {
     visibility: visible;
   }
-}
-.popup-form {
-  padding: 40px;
+  background-color: #fefdfa;
+  border-radius: 7px;
+  padding: 20px;
+  max-width: 380px;
   width: 100%;
-  width: 426px;
-  height: 517px;
-  background-color: #faf9f6;
-  border-radius: 24px;
-  position: relative;
-  @media (max-width: $mobileSmall) {
-    width: 100%;
-    padding: 50px 20px 30px 20px;
-  }
-  &__body {
+}
+.popup {
+  &__content {
   }
 
-  &__title {
-    font-size: 32px;
-    font-style: normal;
-    font-family: 'TTMedium';
-    line-height: 120%;
-    margin-bottom: 24px;
-    @media (max-width: $mobileSmall) {
-      font-size: 26px;
-    }
-  }
-
-  &__subtitle {
-    font-size: 27px;
-    line-height: 140%;
-  }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__input {
-    margin-bottom: 16px;
-    height: 60px;
-    width: 100%;
-    border-radius: 12px;
-    color: $black;
-    padding-left: 24px;
-    font-size: 20px;
-    font-style: normal;
-    font-family: 'TTRegular';
-    line-height: 140%;
-    &::placeholder {
-      color: $black;
-    }
-  }
-
-  &__number {
-  }
-
-  &__button {
-    height: 93px;
-    width: 100%;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #faaf1c 0%, #d36718 100%);
-    font-size: 32px;
-    font-style: normal;
-    font-family: 'TTMedium';
-    color: $white;
-    transition: opacity 0.3s;
-    margin-bottom: 32px;
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
     &:hover {
       opacity: 0.7;
     }
   }
 
-  &__label {
+  &__title {
+    margin-top: 55px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &__form {
+    width: 100%;
     display: flex;
-    gap: 8px;
-    align-items: flex-start;
-    input {
-      margin-top: 2px;
-    }
-    p {
-      font-size: 14px;
-      font-style: normal;
-      font-family: 'TTRegular';
-      line-height: 140%;
-      span {
-        color: #1890ff;
-        cursor: pointer;
-      }
-    }
+    flex-direction: column;
+    gap: 15px;
   }
 
-  &__checkbox {
-  }
-
-  &__close {
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-}
-
-.popup-video {
-  width: 90%;
-  height: 90vh;
-  &__body {
+  &__input {
     width: 100%;
-    height: 100%;
   }
-  iframe {
+
+  &__button {
+    font-size: 16px;
     width: 100%;
-    height: 100%;
+    height: 46px;
   }
 }

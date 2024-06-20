@@ -1,6 +1,6 @@
 @import "_null.scss";
 @import "_mixin";
-// @import "_popup";
+@import "_popup";
 .wrapper {
   overflow: hidden;
   display: flex;
@@ -46,3 +46,6 @@ main {
 @import "_routes";
 @import "_reviews";
 @import "_book";
+@import "_contacts";
+@import "_error";
+@import "_footer";
