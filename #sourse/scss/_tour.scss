@@ -1,0 +1,160 @@
+.tour {
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    gap: 24px;
+    @media (max-width: $pc) {
+      display: block;
+    }
+  }
+
+  &__left {
+    flex: 0 0 800px;
+    @media (max-width: $pc) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+  }
+}
+
+.tour {
+  &__right {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    @media (max-width: $mobile) {
+      font-size: 32px;
+    }
+  }
+
+  &__value {
+    margin-bottom: 15px;
+    b {
+      color: $black;
+      font-weight: 700;
+      line-height: 130%;
+    }
+    span {
+      font-weight: 500;
+      line-height: 130%;
+      color: $black;
+    }
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+  }
+
+  &__price {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    @media (max-width: $mobile) {
+      font-size: 32px;
+    }
+  }
+
+  &__form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+  }
+
+  &__button {
+    width: 100%;
+    height: 46px;
+    font-size: 16px;
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+  }
+}
+
+.main-swiper {
+  width: 800px;
+  height: 370px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+  @media (max-width: $mobile) {
+    margin-bottom: 10px;
+    height: 200px;
+  }
+}
+
+.main-swiper-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-flow: column;
+  height: 370px;
+}
+
+.main-swiper-slide {
+  height: 100%;
+  width: 100%;
+  img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.thumbnail-swiper {
+  width: 800px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 10px;
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+  @media (max-width: $mobile) {
+    height: 70px;
+  }
+}
+
+.thumbnail-swiper-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: column;
+  height: 100%;
+}
+.thumbnail-swiper-slide {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  img {
+    width: 100%;
+    border-radius: 10px;
+    height: 140px;
+    object-fit: cover;
+    @media (max-width: $mobile) {
+      height: 70px;
+    }
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+}

@@ -26,3 +26,48 @@ function ibg() {
   }
 }
 ibg();
+
+//slider
+const mainSwiperContainer = document.querySelector(".main-swiper");
+
+if (mainSwiperContainer) {
+  const mainSwiper = new Swiper(".main-swiper", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 1,
+    slideToClickedSlide: true,
+  });
+
+  // Initialize the thumbnail Swiper
+  const thumbnailSwiper = new Swiper(".thumbnail-swiper", {
+    spaceBetween: 24,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 24,
+      },
+    },
+  });
+
+  // Make the main swiper control the thumbnail swiper
+  mainSwiper.on("slideChange", function () {
+    const activeIndex = mainSwiper.realIndex;
+    thumbnailSwiper.slides.removeClass("swiper-slide-thumb-active");
+    thumbnailSwiper.slides.eq(activeIndex).addClass("swiper-slide-thumb-active");
+  });
+
+  // Добавление обработки клика для миниатюр
+  thumbnailSwiper.on("click", function (swiper) {
+    const clickedIndex = swiper.clickedIndex;
+    if (clickedIndex !== undefined) {
+      mainSwiper.slideToLoop(clickedIndex);
+    }
+  });
+}
